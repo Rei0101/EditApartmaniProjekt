@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="wishlist.css">
+    <title>Wishlist</title>
+</head>
+<body>
+<nav class="navbar filter">
+    <h2>HEADER</h2>
+    
+      
+</nav>
+<div id="profil">
+    <div id="profilna"></div>
+    <h1 class="ime">Gost</h1>
+    <p class="metodaplacanja"></p>
+    <div id="prvi">Login</div>
+    <div id="drugi">Povratne Informacije</div>
+    <div id="treci">Plaćanje</div>
+
+
+</div>
+
+<center><div id="loginpopup">
+    
+    <i class="far fa-times-circle"id="exitbtn"></i>
+    <form id="loginforma">
+        <label>Ime</label><br>
+        <input type="text"name="ime"id="valueimena"></input>
+        <br>
+        <label>Lozinka</label><br>
+        <input type="password"name="lozinka"></input>
+        <br><br>
+        <input type="submit"name="submit"value="Send"></input>
+
+
+    </form>
+
+</div></center>
+
+
+<center><div id="povratnepopup">
+    
+    <i class="far fa-times-circle"id="exitbtn2"></i><br>
+    <form id="povratneforma">
+        <label> Molim vas dajte svoje iskreno mišljenje o našoj usluzi</label><br><br>
+        <textarea name="myTextBox" cols="48" rows="5">
+        </textarea><br>
+        <br/>
+        <input type="submit"value="Send"name="submit" />
+        </form>
+</div></center>
+
+
+
+<center><div id="placanjepopup">
+    
+    <i class="far fa-times-circle"id="exitbtn3"></i>
+    <br><br><br><br>
+    <p>Molim vas odaberite preferirani način plaćanja</p>
+    <ul class="ulplacanje">
+        <li class="liplacanje"id="paypal"><i class="fab fa-cc-paypal"></i></li>
+        <li class="liplacanje"id="mastercard"><i class="fab fa-cc-mastercard"></i></li>
+        <li class="liplacanje"id="applepay"><i class="fab fa-apple-pay"></i></li>
+    </ul>
+    
+
+</div></center>
+
+
+
+<div id="mojwishlist">
+    <h2>Moj Wishlist</h2>
+    <ul id="sortable">
+        <li class="ui-state-default">Dubrovnik</li>
+        <li class="ui-state-default">Zagreb</li>
+        <li class="ui-state-default">Trogir</li>
+        <li class="ui-state-default">Solin</li>
+        <li class="ui-state-default">Split</li>
+        <li class="ui-state-default">Šibenik</li>
+        <li class="ui-state-default">Knin</li>
+       
+    </ul>
+    <button id="dodajgrad">Dodaj Novi Grad/Mjesto</button>
+
+    
+</div><br><br>
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+    <div class="footer-left">
+
+        <p class="footer-links">
+            <a class="link-1" href="index.html">Početna</a>
+
+            <a href="onama.html">O Nama</a>
+
+            <a href="#">Kontakt</a>
+        </p>
+
+        <p>Apartmani.hr &copy; 2021</p>
+    </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="wishlist.js"></script>
+<script src="https://kit.fontawesome.com/d60ab49f85.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+.popup {
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4) /* prve 3 nule su ti RGB, a 0.4 ti je opacity */
+    
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+.card{  /*  ono sta si ti pisa samo ovaj 'card' jos uzima css iz bootstrap servera da to sve uredi i olaksa nam posao */
+
+    width : 340px;
+    height : max-content;
+    border-radius: 0px 0px 0px 15px;
+    background-color : white;
+    padding : 15px;
+    margin : 20px;
+    border: 2px solid black;
+    float: left;
+    background-repeat: no-repeat;   
+    text-align:center ;  
+
+}
+
+.cardnaslov{
+
+    font-size: large;
+    font-weight: bolder;
+    padding:3px;
+
+
+}
+
+.cardimg{
+    border-radius: 0px 0px 0px 15px;
+    width:350px;
+    height:300px;
+
+}
+
+
+.filter{
+   
+    background-color: rgb(211, 211, 211);
+    padding-left: 850px;
+    margin-bottom: 20px;
+   
+    
+}
+
+#wrapper{
+
+    background-color: rgb(211, 211, 211);
+    height:700px;
+    padding-left:170px;
+    overflow: scroll;
+    max-height: 1200px; 
+    align-items: baseline;
+
+
+}
+
+.zabrisanje{
+
+    display: none !important;
+
+}
+
+#sidebar{
+
+    position:fixed;
+    top:22%;
+    left:-10%;  
+    background-color: blanchedalmond;
+    height:500px;
+    width:130px;
+    padding-top: 100px;
+    border: 2px solid black;
+    border-left:0px;
+    text-align: center;
+    z-index:1;
+
+}
+
+.onama{
+    position:absolute;
+    left:40%;
+}
+.wishlist{
+    position:absolute;
+    left:56.5%;
+}
+.logoheader{
+    height:90px;
+    padding-bottom: 10px;
+
+}
+#zasliku{
+
+    height:auto;
+    overflow:hidden;
+    max-height:90px;
+    align-items: center;
+
+}
+
+#searchbar{
+    border-radius: 25px;
+}
+#searchbutton{
+    border-radius:50px;
+    background-color:black;
+    border:none;
+}
+#searchbutton:hover{
+    background-color: black;
+
+}
