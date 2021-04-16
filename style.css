@@ -29,18 +29,17 @@
 
 
 
-.card{  /*  ono sta si ti pisa samo ovaj 'card' jos uzima css iz bootstrap servera da to sve uredi i olaksa nam posao */
+.card{  
 
-    width : 340px;
-    height : max-content;
-    border-radius: 0px 0px 0px 15px;
+    width : 340px !important;
+    height : max-content !important;
     background-color : white;
     padding : 15px;
     margin : 20px;
-    border: 2px solid black;
     float: left;
     background-repeat: no-repeat;   
     text-align:center ;  
+    border-radius: 0px 0px 0px 0px !important; 
 
 }
 
@@ -88,21 +87,7 @@
 
 }
 
-#sidebar{
 
-    position:fixed;
-    top:22%;
-    left:-10%;  
-    background-color: blanchedalmond;
-    height:500px;
-    width:130px;
-    padding-top: 100px;
-    border: 2px solid black;
-    border-left:0px;
-    text-align: center;
-    z-index:1;
-
-}
 
 .onama{
     position:absolute;
@@ -137,4 +122,42 @@
 #searchbutton:hover{
     background-color: black;
 
+}
+
+#slider-range{
+    width:220px;
+    height:15px;
+    padding-left:5px;
+}
+
+#filteri{
+    list-style-type:none;
+    display: inline;
+}
+
+.mincijenali{
+    width:60px;
+    margin-left:30px;
+    
+}
+
+.maxcijena{
+    width:60px;
+    margin-left:125px;
+    margin-top:-61px;
+}
+
+.brsobali{
+   position:fixed;
+        top: 25.15%;
+        left:21%;
+    list-style-type:none;
+    
+}
+
+#botunforma{
+    position:fixed;
+        top:27.5%;
+        left:26%;
+    
 }

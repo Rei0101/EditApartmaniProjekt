@@ -1,26 +1,24 @@
 <html>
-
+<head>
+</head>
 <body>
-
-<center><h1>HVALA NA PRIJAVI ZA POSAO!<br>VAŠA PRIJAVA JE PRIMLJENA U NAŠU BAZU PODATAKA I UZETI ĆEMO JE U OBZIR.</h1></center>
 <?php
 
-if(isset($_POST["ime"]) || isset($_POST["prez"]) || isset($_POST["tel"])){
+if(isset($_POST["ime"]) || isset($_POST["prezime"]) || isset($_POST["mail"])){
 		$ime = $_POST["ime"];
-		$prez = $_POST["prez"];
-		$tel = $_POST["tel"];
+		$prezime = $_POST["prezime"];
+		$mail = $_POST["mail"];
 		
 		
-		$con = mysqli_connect("localhost", "root", "", "zaposlenici");
-		$ubaci = "INSERT INTO noveprijave(ime, prez, tel) VALUES('$ime', '$prez', '$tel')";
+		$con = mysqli_connect("localhost", "root", "", "zaposlenicibp");
+
+		$ubaci = "INSERT INTO noveprijave(ime, prezime, mail) VALUES('$ime', '$prezime', '$mail')";
 		
 		$result = mysqli_query($con, $ubaci);
-		
-		
+	
 		mysqli_close($con);
 }
 
 ?>
-
 </body>
 </html>

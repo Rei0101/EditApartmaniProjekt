@@ -59,15 +59,22 @@
                 <h4>Molimo vas da unesete vaše podatke.</h4>
             </div>
             <div id="forma">
-                <form action="onama.php" method="POST">
-                    Ime:<input type="text" name="ime"><br><br>
-                    
-                    Prezime:<input type="text" name="prez"><br><br>
-
-                    Tel:<input type="text" name="tel"><br><br><br>
-                    
-                    <input type="submit" name="submit" value="Pošalji">
-                </form>
+                <form action="onama.php" method="post">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">E-Mail</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail"name="mail">
+                      <small id="emailHelp" class="form-text text-muted">Javit ćemo vam se što brže moguće!</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Ime</label>
+                        <input class="form-control" type="text" placeholder="Ime"name="ime">
+                    </div>
+                    <div class="form-group">
+                        <label>Prezime</label>
+                        <input class="form-control" type="text" placeholder="Prezime"name="prezime">
+                    </div><br>
+                    <button type="submit" class="btn btn-primary"><b>PRIJAVI SE</b></button>
+                  </form><br><br>
             </div>
             </center>
         </div> 
@@ -92,7 +99,7 @@
                 <a class="link-1" href="#">Početna</a>
     
                 <a href="#">Blog</a>
-    
+     
                 <a href="#">Cjenik</a>
     
                 <a href="#">O Nama</a>
