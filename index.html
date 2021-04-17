@@ -33,13 +33,13 @@
     <div id="wrapper">
       <h1 class="filterinaslov"><b>Apartmani U Vašoj Blizini</b></h1>
         <div class="form-group">
-          <form id="filterforma">
+         
             <ul id="filteri">
               <li class="mincijenali">
-              <label for="cijenamin">Min.Cijena</label>
+              <label for="cijenamin"min = "1" max="198">Min.Cijena</label>
               <input type="number" class="form-control" id="cijenamin"></li>
               <li class="maxcijena"><label for="cijenamax">Max.Cijena</label>
-              <input type="number" class="form-control" id="cijenamax"></li>
+              <input type="number" class="form-control" id="cijenamax"min="12" max="200"></li>
               <li class="brsobali">
                 <label>Broj Soba</label>
                 <select class="form-control" id="brojsoba">
@@ -52,7 +52,7 @@
               </li>        
             </ul>
             <button type="button" class="btn btn-primary mb-2" id="botunforma">Filtriraj</button>
-          </form>
+         
         </div>
     
     </div>

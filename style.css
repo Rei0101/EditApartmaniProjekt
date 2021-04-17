@@ -136,13 +136,13 @@
 }
 
 .mincijenali{
-    width:60px;
+    width:70px;
     margin-left:30px;
     
 }
 
 .maxcijena{
-    width:60px;
+    width:70px;
     margin-left:125px;
     margin-top:-61px;
 }
@@ -158,5 +158,9 @@
     width:80px;
     margin-left:350px;
     margin-top:-61px;
+    
+}
+
+.prolazi{
     
 }
