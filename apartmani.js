@@ -34,11 +34,26 @@ let Apartman = function(slika, naslov, lokacija, cijena ,brsoba){
     karticabrsoba.append(sobetxt);
     karticacijena.append(cijenatxt);
 
+    let patak
+
     let popup = document.getElementById("popup")
     let x = document.getElementById("close");
+    let cijenaMin = document.getElementById("cijenamin");
+    let cijenaMax = document.getElementById("cijenamax");
+    let brojSoba = document.getElementById("brojsoba");
     let popupContent = document.getElementById("popup-content");
     kartica.addEventListener("click", otvori);
     x.addEventListener("click", zatvori);
+    document.getElementById("botunforma").addEventListener("click", filteri);
+
+    function filteri(){
+        if (cijenaMin.value >= toString(cijena.value)){
+            console.log("aaa");
+        }
+        else{
+            console.log("bbb");
+        }
+    }
     
     function otvori(){
         popup.classList.add("popup");

@@ -32,30 +32,29 @@
 
     <div id="wrapper">
       <h1 class="filterinaslov"><b>Apartmani U Vašoj Blizini</b></h1>
-      <form id="filterforma">
-        <ul id="filteri">
-        <li class="mincijenali"><div class="form-group">
-          <label for="cijenamin">Min.Cijena</label>
-          <input type="number" class="form-control" id="cijenamin"></li>
-          <li class="maxcijena"><label for="cijenamax">Max.Cijena</label>
-          <input type="number" class="form-control" id="cijenamax"></li>
+        <div class="form-group">
+          <form id="filterforma">
+            <ul id="filteri">
+              <li class="mincijenali">
+              <label for="cijenamin">Min.Cijena</label>
+              <input type="number" class="form-control" id="cijenamin"></li>
+              <li class="maxcijena"><label for="cijenamax">Max.Cijena</label>
+              <input type="number" class="form-control" id="cijenamax"></li>
+              <li class="brsobali">
+                <label>Broj Soba</label>
+                <select class="form-control" id="brojsoba">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </li>        
+            </ul>
+            <button type="button" class="btn btn-primary mb-2" id="botunforma">Filtriraj</button>
+          </form>
         </div>
-
-
-        <li class="brsobali">
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Broj Soba</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div></li>
-      </ul>
-      <button type="submit" class="btn btn-primary mb-2"id="botunforma">Filtriraj</button>
-    </form>
+    
     </div>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
