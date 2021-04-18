@@ -1,4 +1,8 @@
 //searchbar
+
+
+
+
 function SearchFunkcija(){ 
     var searchvalue = $("#searchbar").val();
 
@@ -6,7 +10,8 @@ function SearchFunkcija(){
     $('.card:not(:contains('+ searchvalue +'))').addClass("zabrisanje");
   };
 
-
+  var cijenaminunos = parseInt($("#cijenamin").val());
+  var cijenamaxunos = parseInt($("#cijenamax").val());
   $("#botunforma").click(function(){
     
 
@@ -40,48 +45,36 @@ function SearchFunkcija(){
       
     }
     else{
-      //console.log("ne brisem se ");
+      console.log("ne brisem se ");
     }
   }//kraj filtera za broj soba
-
-
-  var cijenaminunos = parseInt($("#cijenamin").val());
-  var cijenamaxunos = parseInt($("#cijenamax").val());
-  
-  var listacijena = [];
-
  
 
-  $('.card').each(function() {
-          var $this = $(this);
-          listacijena.push({
+/*   
+  let djecacard = $(".card");
 
-              'vrcijena' : $this.find('.cijenaapartmana').text()
-      
-          });
-          console.log(listacijena);
-      });
+  let cijene = djecacard.childNodes;
+  console.log(cijene);
 
-
-      
-    for(i = 0;i < listacijena.length;i++){
-      //console.log(listacijena[i].vrcijena);
-      if(parseInt(listacijena[i].vrcijena) <= parseInt(cijenamaxunos) && parseInt(listacijena[i].vrcijena) >= parseInt(cijenaminunos)){
-
-        var nadeni = []; 
+  let searchitem = parseInt(event.currentTarget.value);
+  
+  
+  for(i = 0;i < djecacard.length;i++){
+    console.log(djecacard);
+      if(parseInt(djecacard[i].textContent) >= cijenaminunos && parseInt(djecacard[i].textContent) <= cijenamaxunos ){
+        console.log(djecacard[i].textContent);
+        djecacard[i].style.display="block";
         
-        nadeni.push( parseInt(listacijena[i].vrcijena)); //sve brojeve koje je nasa da odogovaraju uvjetu idu tu tako da izbrisemo sve kartice koje ga nemaju
-        $('.cijenaapartmana:not(:contains('+ odinestomoraic +'))').parent().addClass("zabrisanje")
-
-        
-       
-        
-      }
-
+      } 
       else{
-        console.log("Ja Ne Odgovaram Uvjetima");
+        djecacard[i].style.display = "none";
       }
     }
+   */
+
+
+
+  
     
 
     
