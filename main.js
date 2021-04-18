@@ -15,8 +15,7 @@ function SearchFunkcija(){
     }
    
 
-
-/*     var brojsobaunos = $("#brojsoba").val();
+    var brojsobaunos = $("#brojsoba").val();
     var listabs = [];
     
 
@@ -44,7 +43,6 @@ function SearchFunkcija(){
       //console.log("ne brisem se ");
     }
   }//kraj filtera za broj soba
- */
 
 
   var cijenaminunos = parseInt($("#cijenamin").val());

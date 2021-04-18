@@ -11,22 +11,33 @@ let Apartman = function(slika, naslov, lokacija, cijena ,brsoba){
     let karticalokacija = document.createElement("h6");
     let karticacijena = document.createElement("h6");
     let karticabrsoba = document.createElement("h6");
+    let karticacijenatekst = document.createElement("h6");
+    let karticabrsobatekst = document.createElement("h6");
+    
+    karticacijenatekst.innerHTML=" €/noć";
+    karticabrsobatekst.innerHTML=" soba/be";
     kartica.style.height = "max-content";
     kartica.appendChild(karticaimg);
     kartica.appendChild(karticanaslov);
     kartica.appendChild(karticalokacija);
     kartica.appendChild(karticacijena); 
+    kartica.appendChild(karticacijenatekst);
+    karticacijena.style.paddingTop="10px";
+    karticacijenatekst.style.paddingBottom="10px";
     kartica.appendChild(karticabrsoba);
+    kartica.appendChild(karticabrsobatekst);
     kartica.classList.add("card"); //ko attributre samo malo kraca i zgodnija linija
     karticanaslov.classList.add("cardnaslov"); //ko attributre samo malo kraca i zgodnija linija
     kartica.classList.add("cardimg"); //ko attributre samo malo kraca i zgodnija linija
     document.getElementById("wrapper").append(kartica); 
     karticaimg.src = slika; //postavlja pozadinu
     karticanaslov.innerHTML= naslov;
-    karticacijena.innerHTML=cijena;
+    karticacijena.innerHTML=cijena;// + " €/noć";
     karticalokacija.innerHTML=lokacija; //postavi sta ce pisat u h4
     karticanaslov.innerHTML= naslov;
-    karticabrsoba.innerHTML=brsoba;
+    karticabrsoba.innerHTML=brsoba;// + " soba/be";
+    //karticacijena.appendChild(karticacijenatekst);
+    //karticabrsoba.appendChild(karticabrsobatekst);
     karticabrsoba.classList.add("brojsoba");
     karticacijena.classList.add("cijenaapartmana");
     //let sobetxt = document.createElement("h6").innerHTML=" Sobe";
