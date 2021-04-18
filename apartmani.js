@@ -11,46 +11,40 @@ let Apartman = function(slika, naslov, lokacija, cijena ,brsoba){
     let karticalokacija = document.createElement("h6");
     let karticacijena = document.createElement("h6");
     let karticabrsoba = document.createElement("h6");
-    let karticacijenatekst = document.createElement("h6");
-    let karticabrsobatekst = document.createElement("h6");
+   
     
-    karticacijenatekst.innerHTML=" €/noć";
-    karticabrsobatekst.innerHTML=" soba/be";
+    
+    
     kartica.style.height = "max-content";
     kartica.appendChild(karticaimg);
     kartica.appendChild(karticanaslov);
     kartica.appendChild(karticalokacija);
     kartica.appendChild(karticacijena); 
-    kartica.appendChild(karticacijenatekst);
-    karticacijena.style.paddingTop="10px";
-    karticacijenatekst.style.paddingBottom="10px";
     kartica.appendChild(karticabrsoba);
-    kartica.appendChild(karticabrsobatekst);
-    kartica.classList.add("card"); //ko attributre samo malo kraca i zgodnija linija
-    karticanaslov.classList.add("cardnaslov"); //ko attributre samo malo kraca i zgodnija linija
-    kartica.classList.add("cardimg"); //ko attributre samo malo kraca i zgodnija linija
+    
+    kartica.classList.add("card"); 
+    karticanaslov.classList.add("cardnaslov"); 
+    kartica.classList.add("cardimg"); 
+    karticalokacija.classList.add("lokacijacard");
     document.getElementById("wrapper").append(kartica); 
-    karticaimg.src = slika; //postavlja pozadinu
+    karticaimg.src = slika; 
     karticanaslov.innerHTML= naslov;
-    karticacijena.innerHTML=cijena;// + " €/noć";
-    karticalokacija.innerHTML=lokacija; //postavi sta ce pisat u h4
+    karticacijena.innerHTML=cijena;
+    karticalokacija.innerHTML=lokacija; 
     karticanaslov.innerHTML= naslov;
-    karticabrsoba.innerHTML=brsoba;// + " soba/be";
-    //karticacijena.appendChild(karticacijenatekst);
-    //karticabrsoba.appendChild(karticabrsobatekst);
+    karticabrsoba.innerHTML=brsoba;
+   
     karticabrsoba.classList.add("brojsoba");
     karticacijena.classList.add("cijenaapartmana");
-    //let sobetxt = document.createElement("h6").innerHTML=" Sobe";
-    //let cijenatxt = document.createElement("h5").innerHTML=" €/Noć";
-    //karticabrsoba.append(sobetxt);
-    //karticacijena.append(cijenatxt);
+    
 
   
 
-    let popup = document.getElementById("popup")
+    let popup = document.getElementById("popup");
     let x = document.getElementById("close");
     let cijenaMin = document.getElementById("cijenamin");
     let cijenaMax = document.getElementById("cijenamax");
+
     
     let popupContent = document.getElementById("popup-content");
     kartica.addEventListener("click", otvori);
@@ -69,11 +63,15 @@ let Apartman = function(slika, naslov, lokacija, cijena ,brsoba){
         popupContent.appendChild(karticanaslov);
         popupContent.appendChild(karticaimg);
         popupContent.appendChild(karticalokacija);
-        popupContent.appendChild(karticacijena)
+        popupContent.appendChild(karticacijena);
+        karticacijena.innerHTML+=" €/noć";
         popupContent.appendChild(karticabrsoba);
+        karticabrsoba.innerHTML+=" soba/e";
         
     }
     function zatvori(){
+        karticacijena.innerHTML=cijena;
+        karticabrsoba.innerHTML=brsoba;
         kartica.appendChild(karticaimg);
         kartica.appendChild(karticanaslov);
         kartica.appendChild(karticalokacija);
@@ -83,23 +81,23 @@ let Apartman = function(slika, naslov, lokacija, cijena ,brsoba){
         popupContent.classList.remove("popup-content");
         x.classList.remove("close");
         popup.classList.remove("popup");
-//triban ovamo dodat jos da se property-i u divu ne maknu kad se otvori pop-up
+
     }
     
 }
 
-let apartmani1 = new Apartman('slike/slika1.jpg', "Villa Tulipan" , "Sinj" , 49  , 2  );
-let apartmani2 = new Apartman("slike/slika1.jpg", "Blue Graden Apartman" , "K.Sućurac" , 29, 2);
-let apartmani3 = new Apartman("slike/slika1.jpg", "Villa Demont" , "Solin" , 59 , 3);
-let apartmani4 = new Apartman("slike/slika1.jpg", "Apartman Radić" , "Split" , 79 , 3);
-let apartmani5 = new Apartman("slike/slika1.jpg", "Beach House 1" , "K.Stari" , 39 ,3);
-let apartmani6 = new Apartman("slike/slika1.jpg", "Apartman Ivanić" , "Seget" , 29, 2);
-let apartmani7 = new Apartman("slike/slika1.jpg", "Villa Monteri" , "Supetar" , 99, 4);
-let apartmani8 = new Apartman("slike/slika1.jpg", "Apartman Balan" , "Supetar" , 59, 3);
-let apartmani9 = new Apartman("slike/slika1.jpg", "Penthouse Klaudia" , "Split" , 149, 5);
-let apartmani10 = new Apartman("slike/slika1.jpg", "Apartman Luxury" , "K.Kambelovac" , 89, 4);
-let apartmani11 = new Apartman("slike/slika1.jpg", "Villa Lucia" , "Split" , 189, 5);
-let apartmani12 = new Apartman("slike/slika1.jpg", "Apartman Maria" , "Trilj" , 29, 1);
+let apartmani1 = new Apartman('slike/slika2.jpg', "Villa Tulipan" , "Sinj" , 39  , 2  );
+let apartmani2 = new Apartman("slike/slika3.jpg", "Blue Graden Apartman" , "K.Sućurac" , 29, 2);
+let apartmani3 = new Apartman("slike/slika4.jpg", "Villa Demont" , "Solin" , 59 , 3);
+let apartmani4 = new Apartman("slike/slika5.jpg", "Apartman Radić" , "Split" , 79 , 3);
+let apartmani5 = new Apartman("slike/slika6.jpg", "Beach House 1" , "K.Stari" , 39 ,3);
+let apartmani6 = new Apartman("slike/slika7.jpg", "Apartman Ivanić" , "Seget" , 29, 2);
+let apartmani7 = new Apartman("slike/slika8.jpg", "Villa Monteri" , "Supetar" , 99, 4);
+let apartmani8 = new Apartman("slike/slika9.jpg", "Apartman Balan" , "Supetar" , 59, 3);
+let apartmani9 = new Apartman("slike/slika10.jpg", "Penthouse Klaudia" , "Split" , 149, 5);
+let apartmani10 = new Apartman("slike/slika11.jpg", "Apartman Luxury" , "K.Kambelovac" , 89, 4);
+let apartmani11 = new Apartman("slike/slika12.jpg", "Villa Lucia" , "Split" , 189, 5);
+let apartmani12 = new Apartman("slike/slika13.jpg", "Apartman Maria" , "Trilj" , 29, 1);
 
 
 
