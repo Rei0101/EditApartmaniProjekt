@@ -13,9 +13,9 @@ $( function() {
 
    function PopupLogin(){
     $("#loginpopup").fadeIn();
-    $("#loginpopup").css({"visibility":"visible","display":"block"});
+    $("#loginpopup").css({"visibility":"visible","display":"block","margin":"0 auto"});
     $("nav,footer,div:not(#loginpopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
-      'filter':'blur(13px)',
+      'filter':'blur(13px)'
    });
 
    $("#loginforma").submit(function( event ){
@@ -58,7 +58,7 @@ $( function() {
    
       function PovPopup(){
        $("#povratnepopup").fadeIn();
-       $("#povratnepopup").css({"visibility":"visible","display":"block"})
+       $("#povratnepopup").css({"visibility":"visible","display":"block","margin":"0 auto"})
        
        $("nav,footer,div:not(#povratnepopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
          'filter':'blur(13px)',
@@ -89,7 +89,7 @@ $( function() {
      
         function PopupPlacanje(){
          $("#placanjepopup").fadeIn();
-         $("#placanjepopup").css({"visibility":"visible","display":"block"})
+         $("#placanjepopup").css({"visibility":"visible","display":"block","margin":"0 auto"})
         
          $("nav,footer,div:not(#placanjepopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
            'filter':'blur(13px)',
